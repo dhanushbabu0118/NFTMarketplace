@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import profileImage from "../assets/download.png";
 
 function Header() {
     const [darkMode, setDarkMode] = useState(true);
@@ -16,9 +17,9 @@ function Header() {
                 width: "100%"
             }}
         >
-
             <div className="search-box">
                 <span>🔍</span>
+
                 <input
                     type="text"
                     placeholder="Search Here"
@@ -26,7 +27,6 @@ function Header() {
             </div>
 
             <div className="header-actions">
-
                 <button
                     className="icon-button"
                     aria-label="Toggle theme"
@@ -44,13 +44,11 @@ function Header() {
 
                 <div className="header-avatar">
                     <img
-                        src="/src/assets/download.png"
+                        src={profileImage}
                         alt="User"
                     />
                 </div>
-
             </div>
-
         </header>
     );
 }
