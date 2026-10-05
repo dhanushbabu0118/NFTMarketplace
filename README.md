@@ -1,16 +1,91 @@
-# React + Vite
+# NFT Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive NFT Marketplace frontend built with React and Vite, inspired by a Figma Community design.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://nft-marketplace-3gfiitdzg-ft-end.vercel.app/
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://github.com/dhanushbabu0118/NFTMarketplace
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Responsive NFT Marketplace UI
+- Dark Mode and Light Mode
+- Home page with NFT showcase
+- Explore NFTs
+- Active Bids page
+- Saved Items page
+- Collections page
+- User Profile page
+- Settings page
+- NFT cards with wishlist functionality
+- Search bar UI
+- NFT bidding interface
+- Profile and creator sections
+- Responsive mobile navigation
+- Mobile, tablet and desktop layouts
+- React Router navigation
+- Production deployment using Vercel
+
+## Pages
+
+- Home
+- Explore
+- Bids
+- Saved
+- Collections
+- Profile
+- Settings
+
+## Technologies Used
+
+- React.js
+- Vite
+- JavaScript
+- React Router DOM
+- Lucide React
+- CSS3
+- Vercel
+
+## Project Structure
+
+src/
+├── assets/
+│   ├── download.png
+│   └── hero.png
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Sidebar.jsx
+│   ├── TopSection.jsx
+│   ├── NFTGrid.jsx
+│   ├── NFTCard.jsx
+│   ├── MarketStats.jsx
+│   ├── ActivitySections.jsx
+│   └── CreatorsCollections.jsx
+│
+├── data/
+│   └── nftData.js
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Explore.jsx
+│   ├── Bids.jsx
+│   ├── Saved.jsx
+│   ├── Collections.jsx
+│   ├── Profile.jsx
+│   └── Settings.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/dhanushbabu0118/NFTMarketplace.git
