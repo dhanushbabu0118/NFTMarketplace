@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import liquidWave from "../assets/liquid-wave.jpg";
 
 function Collections() {
     const collections = [
@@ -8,92 +9,64 @@ function Collections() {
             name: "Liquid Wave",
             creator: "John Abraham",
             items: "60 Items",
-            image:
-                "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead"
+            image: liquidWave,
         },
         {
             id: 2,
             name: "Papaya",
-            creator: "Digital Artist",
+            creator: "John Abraham",
             items: "60 Items",
-            image:
-                "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d"
+            image: liquidWave,
         },
         {
             id: 3,
             name: "Cute Cube Cool",
             creator: "John Abraham",
             items: "60 Items",
-            image:
-                "https://images.unsplash.com/photo-1618172193763-c511deb635ca"
+            image: liquidWave,
         },
         {
             id: 4,
-            name: "Brighten LQ",
+            name: "Liquid Wave",
             creator: "John Abraham",
             items: "60 Items",
-            image:
-                "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4"
-        }
+            image: liquidWave,
+        },
     ];
 
     return (
         <div className="app-layout">
-
             <Sidebar />
 
             <div className="main-area">
-
                 <Header />
 
                 <main className="collections-page">
 
                     <div className="collections-page-heading">
-
                         <div>
                             <h1>Collections</h1>
-
-                            <p>
-                                Welcome Collections Page
-                            </p>
+                            <p>Welcome Collections Page</p>
                         </div>
 
-                        <button className="create-collection-button">
-                            + Create Collection
-                        </button>
-
+                        <div className="collections-breadcrumb">
+                            Home <span>›</span> Collections
+                        </div>
                     </div>
-
 
                     <section className="collections-content">
 
                         <div className="collections-content-heading">
-
                             <h2>My Collections</h2>
 
-                            <div className="collection-filters">
-
-                                <button className="collection-filter active">
-                                    All
-                                </button>
-
-                                <button className="collection-filter">
-                                    Artwork
-                                </button>
-
-                                <button className="collection-filter">
-                                    Book
-                                </button>
-
-                            </div>
-
+                            <button className="create-collection-button">
+                                + Create Collection
+                            </button>
                         </div>
-
 
                         <div className="collections-page-grid">
 
                             {collections.map((collection) => (
-
                                 <article
                                     className="collection-page-card"
                                     key={collection.id}
@@ -108,38 +81,29 @@ function Collections() {
 
                                         <button
                                             className="collection-save-button"
+                                            aria-label="Save collection"
                                         >
                                             ♡
                                         </button>
 
                                     </div>
 
-
                                     <div className="collection-page-content">
 
                                         <div className="collection-page-title">
-
                                             <div>
-
-                                                <h3>
-                                                    {collection.name}
-                                                </h3>
-
+                                                <h3>{collection.name}</h3>
                                                 <span>
                                                     {collection.creator}
                                                 </span>
-
                                             </div>
 
                                             <strong>
                                                 {collection.items}
                                             </strong>
-
                                         </div>
 
-
                                         <div className="collection-page-actions">
-
                                             <button className="collection-follow-button">
                                                 Follow
                                             </button>
@@ -147,13 +111,11 @@ function Collections() {
                                             <button className="collection-info-button">
                                                 Info
                                             </button>
-
                                         </div>
 
                                     </div>
 
                                 </article>
-
                             ))}
 
                         </div>
@@ -161,9 +123,7 @@ function Collections() {
                     </section>
 
                 </main>
-
             </div>
-
         </div>
     );
 }

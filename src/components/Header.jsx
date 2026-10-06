@@ -9,14 +9,7 @@ function Header() {
     }, [darkMode]);
 
     return (
-        <header
-            className="header"
-            style={{
-                background: "red",
-                minHeight: "68px",
-                width: "100%"
-            }}
-        >
+        <header className="header">
             <div className="search-box">
                 <span>🔍</span>
 

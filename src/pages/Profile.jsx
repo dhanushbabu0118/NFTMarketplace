@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import profileImage from "../assets/download.png";
-
+import liquidWave from "../assets/liquid-wave.jpg";
 function Profile() {
     return (
         <div className="app-layout">
@@ -179,7 +179,7 @@ function Profile() {
                             <div className="bought-card">
 
                                 <img
-                                    src="https://images.unsplash.com/photo-1634986666676-ec8fd927c23d"
+                                    src={liquidWave}
                                     alt="Cute Cube Cool"
                                 />
 
@@ -194,7 +194,7 @@ function Profile() {
                             <div className="bought-card">
 
                                 <img
-                                    src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead"
+                                    src={liquidWave}
                                     alt="Liquid Wave"
                                 />
 
@@ -209,7 +209,7 @@ function Profile() {
                             <div className="bought-card">
 
                                 <img
-                                    src="https://images.unsplash.com/photo-1618172193763-c511deb635ca"
+                                    src={liquidWave}
                                     alt="Papaya"
                                 />
 

@@ -1,82 +1,72 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-
+import liquidWave from "../assets/liquid-wave.jpg";
 function Saved() {
     const savedItems = [
         {
             id: 1,
-            name: "Cute Cube Cool",
+            name: "Liquid Wave",
             creator: "John Abraham",
-            price: "0.0025 ETH",
-            bid: "0.05 ETH",
-            image:
-                "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d"
+            auctionTime: "3h 1m 50s",
+            currentBid: "0.05 ETH",
+            bid: "0.15 ETH",
+            image: liquidWave,
         },
         {
             id: 2,
             name: "Liquid Wave",
             creator: "John Abraham",
-            price: "0.0025 ETH",
-            bid: "0.06 ETH",
-            image:
-                "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead"
+            auctionTime: "3h 1m 50s",
+            currentBid: "0.05 ETH",
+            bid: "0.15 ETH",
+            image: liquidWave,
         },
         {
             id: 3,
-            name: "Papaya",
-            creator: "Digital Artist",
-            price: "0.05 ETH",
-            bid: "0.08 ETH",
-            image:
-                "https://images.unsplash.com/photo-1618172193763-c511deb635ca"
+            name: "Liquid Wave",
+            creator: "John Abraham",
+            auctionTime: "3h 1m 50s",
+            currentBid: "0.05 ETH",
+            bid: "0.15 ETH",
+            image: liquidWave,
         },
         {
             id: 4,
-            name: "Brighten LQ",
+            name: "Liquid Wave",
             creator: "John Abraham",
-            price: "0.05 ETH",
+            auctionTime: "3h 1m 50s",
+            currentBid: "0.05 ETH",
             bid: "0.15 ETH",
-            image:
-                "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4"
-        }
+            image: liquidWave,
+        },
     ];
 
     return (
         <div className="app-layout">
-
             <Sidebar />
 
             <div className="main-area">
-
                 <Header />
 
                 <main className="saved-page">
 
                     <div className="saved-page-heading">
-
                         <div>
                             <h1>Saved Items</h1>
-
-                            <p>
-                                Welcome Saved Page
-                            </p>
+                            <p>Welcome Saved Page</p>
                         </div>
 
-                        <span className="saved-count">
-                            {savedItems.length} Items
-                        </span>
-
+                        <div className="saved-breadcrumb">
+                            Home <span>›</span> Saved
+                        </div>
                     </div>
-
 
                     <section className="saved-content">
 
-                        <div className="saved-section-heading">
-
+                        <div className="saved-content-heading">
                             <h2>Saved Items</h2>
 
                             <div className="saved-filters">
-
                                 <button className="saved-filter active">
                                     All
                                 </button>
@@ -88,23 +78,17 @@ function Saved() {
                                 <button className="saved-filter">
                                     Book
                                 </button>
-
                             </div>
-
                         </div>
-
 
                         <div className="saved-grid">
 
                             {savedItems.map((item) => (
-
                                 <article
                                     className="saved-card"
                                     key={item.id}
                                 >
-
                                     <div className="saved-card-image">
-
                                         <img
                                             src={item.image}
                                             alt={item.name}
@@ -112,47 +96,50 @@ function Saved() {
 
                                         <button
                                             className="saved-heart"
-                                            aria-label="Remove from saved"
+                                            aria-label="Saved item"
                                         >
                                             ♥
                                         </button>
-
                                     </div>
-
 
                                     <div className="saved-card-content">
 
                                         <div className="saved-card-title">
-
                                             <div>
                                                 <h3>{item.name}</h3>
-                                                <span>{item.creator}</span>
+                                                <span>
+                                                    {item.creator}
+                                                </span>
                                             </div>
-
-                                            <strong>
-                                                {item.price}
-                                            </strong>
-
                                         </div>
 
+                                        <div className="saved-bid-info">
 
-                                        <div className="saved-card-info">
+                                            <div>
+                                                <span>Auction time</span>
+                                                <strong>
+                                                    {item.auctionTime}
+                                                </strong>
+                                            </div>
 
                                             <div>
                                                 <span>Current Bid</span>
-                                                <strong>{item.bid}</strong>
+                                                <strong>
+                                                    {item.currentBid}
+                                                </strong>
+                                                <small>
+                                                    {item.bid}
+                                                </small>
                                             </div>
-
-                                            <button className="saved-bid-button">
-                                                Place a Bid
-                                            </button>
 
                                         </div>
 
+                                        <button className="saved-place-bid">
+                                            Place a Bid
+                                        </button>
+
                                     </div>
-
                                 </article>
-
                             ))}
 
                         </div>
@@ -160,9 +147,7 @@ function Saved() {
                     </section>
 
                 </main>
-
             </div>
-
         </div>
     );
 }
