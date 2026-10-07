@@ -4,7 +4,7 @@ A responsive NFT Marketplace frontend built with React and Vite, inspired by a F
 
 ## Live Demo
 
-https://nft-marketplace-rkn1hun79-ft-end.vercel.app
+https://nft-marketplace-edqeolsuw-ft-end.vercel.app
 
 ## GitHub Repository
 
