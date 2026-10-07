@@ -9,11 +9,12 @@ import {
     WalletCards
 } from "lucide-react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Sidebar() {
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     return (
         <aside className="sidebar">
@@ -24,67 +25,77 @@ function Sidebar() {
 
             <nav className="sidebar-menu">
 
-                {/* Home */}
                 <button
-                    className="sidebar-item active"
-                    aria-label="Home"
+                    className={`sidebar-item ${location.pathname === "/"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/")}
+                    aria-label="Home"
                 >
                     <Grid2X2 size={19} />
                 </button>
 
-                {/* Bids */}
                 <button
-                    className="sidebar-item"
-                    aria-label="Bids"
+                    className={`sidebar-item ${location.pathname === "/bids"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/bids")}
+                    aria-label="Bids"
                 >
                     <BriefcaseBusiness size={19} />
                 </button>
 
-                {/* Saved */}
                 <button
-                    className="sidebar-item"
-                    aria-label="Saved"
+                    className={`sidebar-item ${location.pathname === "/saved"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/saved")}
+                    aria-label="Saved"
                 >
                     <Heart size={19} />
                 </button>
 
-                {/* Collections */}
                 <button
-                    className="sidebar-item"
-                    aria-label="Collections"
+                    className={`sidebar-item ${location.pathname === "/collections"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/collections")}
+                    aria-label="Collections"
                 >
                     <Star size={19} />
                 </button>
 
-                {/* Profile */}
                 <button
-                    className="sidebar-item"
-                    aria-label="Profile"
+                    className={`sidebar-item ${location.pathname === "/profile"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/profile")}
+                    aria-label="Profile"
                 >
                     <CircleUserRound size={19} />
                 </button>
 
-                {/* Settings */}
                 <button
-                    className="sidebar-item"
-                    aria-label="Settings"
+                    className={`sidebar-item ${location.pathname === "/settings"
+                            ? "active"
+                            : ""
+                        }`}
                     onClick={() => navigate("/settings")}
+                    aria-label="Settings"
                 >
                     <Settings size={19} />
                 </button>
 
             </nav>
 
-            {/* Logout */}
             <button
                 className="sidebar-logout"
                 aria-label="Logout"
-                onClick={() => navigate("/")}
             >
                 <LogOut size={19} />
             </button>

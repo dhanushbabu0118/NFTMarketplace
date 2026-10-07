@@ -6,21 +6,26 @@ function NFTCard({ nft }) {
     const [liked, setLiked] = useState(false);
 
     const handleWishlist = () => {
-        setLiked(!liked);
+        setLiked((previousLiked) => !previousLiked);
     };
 
     return (
         <article className="nft-card">
 
+            {/* NFT Image */}
             <div className="nft-card-image">
 
                 <img
                     src={nft.image}
                     alt={nft.name}
+                    loading="lazy"
                 />
 
+                {/* Wishlist */}
                 <button
-                    className={`heart-button ${liked ? "liked" : ""}`}
+                    type="button"
+                    className={`heart-button ${liked ? "liked" : ""
+                        }`}
                     onClick={handleWishlist}
                     aria-label={
                         liked
@@ -30,32 +35,66 @@ function NFTCard({ nft }) {
                 >
                     <Heart
                         size={18}
-                        fill={liked ? "currentColor" : "none"}
+                        fill={
+                            liked
+                                ? "currentColor"
+                                : "none"
+                        }
                     />
                 </button>
 
             </div>
 
+
+            {/* NFT Content */}
             <div className="nft-card-content">
 
-                <h3>{nft.name}</h3>
+                <h3>
+                    {nft.name}
+                </h3>
+
 
                 <div className="nft-info-row">
 
+                    {/* Auction */}
                     <div>
-                        <span>Auction time</span>
-                        <strong>{nft.auctionTime}</strong>
+
+                        <span>
+                            Auction time
+                        </span>
+
+                        <strong>
+                            {nft.auctionTime}
+                        </strong>
+
                     </div>
 
+
+                    {/* Current Bid */}
                     <div className="bid-info">
-                        <span>Current Bid</span>
-                        <strong>{nft.currentBid}</strong>
-                        <small>{nft.bid}</small>
+
+                        <span>
+                            Current Bid
+                        </span>
+
+                        <strong>
+                            {nft.currentBid}
+                        </strong>
+
+                        <small>
+                            {nft.bid}
+                        </small>
+
                     </div>
 
                 </div>
 
-                <button className="place-bid-button">
+
+                {/* Bid Button */}
+                <button
+                    type="button"
+                    className="place-bid-button"
+                >
                     Place a Bid
                 </button>
 

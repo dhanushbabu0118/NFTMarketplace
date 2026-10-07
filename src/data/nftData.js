@@ -1,43 +1,83 @@
 const nftData = [
     {
         id: 1,
-        name: "Cosmic Ape",
-        creator: "Digital Artist",
-        price: 2.5,
-        auctionTime: "2h 45m",
-        currentBid: "0.08 ETH",
-        bid: "0.12 ETH",
-        image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d"
+        name: "Liquid Wave",
+        category: "Artwork",
+        image:
+            "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
     },
     {
         id: 2,
-        name: "Cyber Punk",
-        creator: "Crypto Artist",
-        price: 1.8,
-        auctionTime: "4h 20m",
+        name: "Liquid Wave",
+        category: "Artwork",
+        image:
+            "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
         currentBid: "0.05 ETH",
-        bid: "0.10 ETH",
-        image: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead"
+        bid: "0.15 ETH"
     },
     {
         id: 3,
-        name: "Neon Skull",
-        creator: "Pixel Creator",
-        price: 3.2,
-        auctionTime: "1h 35m",
-        currentBid: "0.12 ETH",
-        bid: "0.18 ETH",
-        image: "https://images.unsplash.com/photo-1618172193763-c511deb635ca"
+        name: "Liquid Wave",
+        category: "Book",
+        image:
+            "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
     },
     {
         id: 4,
-        name: "Future World",
-        creator: "Digital Creator",
-        price: 4.1,
-        auctionTime: "5h 10m",
-        currentBid: "0.15 ETH",
-        bid: "0.22 ETH",
-        image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4"
+        name: "Liquid Wave",
+        category: "Artwork",
+        image:
+            "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
+    },
+    {
+        id: 5,
+        name: "Liquid Wave",
+        category: "Book",
+        image:
+            "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
+    },
+    {
+        id: 6,
+        name: "Liquid Wave",
+        category: "Artwork",
+        image:
+            "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
+    },
+    {
+        id: 7,
+        name: "Liquid Wave",
+        category: "Book",
+        image:
+            "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
+    },
+    {
+        id: 8,
+        name: "Liquid Wave",
+        category: "Artwork",
+        image:
+            "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80",
+        auctionTime: "3h 1m 50s",
+        currentBid: "0.05 ETH",
+        bid: "0.15 ETH"
     }
 ];
 

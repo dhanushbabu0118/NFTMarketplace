@@ -1,7 +1,9 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import liquidWave from "../assets/liquid-wave.jpg";
+
 function Saved() {
+
     const savedItems = [
         {
             id: 1,
@@ -41,105 +43,201 @@ function Saved() {
         },
     ];
 
+
     return (
         <div className="app-layout">
+
             <Sidebar />
 
             <div className="main-area">
+
                 <Header />
 
                 <main className="saved-page">
 
+                    {/* Page Heading */}
                     <div className="saved-page-heading">
+
                         <div>
-                            <h1>Saved Items</h1>
-                            <p>Welcome Saved Page</p>
+
+                            <span className="saved-page-label">
+                                NFT MARKETPLACE
+                            </span>
+
+                            <h1>
+                                Saved Items
+                            </h1>
+
+                            <p>
+                                Your favorite NFT collectibles
+                            </p>
+
                         </div>
+
 
                         <div className="saved-breadcrumb">
-                            Home <span>›</span> Saved
+
+                            <span>
+                                Home
+                            </span>
+
+                            <b>
+                                ›
+                            </b>
+
+                            <span>
+                                Saved
+                            </span>
+
                         </div>
+
                     </div>
 
+
+                    {/* Saved Content */}
                     <section className="saved-content">
 
+                        {/* Section Heading */}
                         <div className="saved-content-heading">
-                            <h2>Saved Items</h2>
 
+                            <div>
+
+                                <h2>
+                                    Saved Items
+                                </h2>
+
+                                <span>
+                                    NFTs you have saved
+                                </span>
+
+                            </div>
+
+
+                            {/* Filters */}
                             <div className="saved-filters">
-                                <button className="saved-filter active">
+
+                                <button
+                                    type="button"
+                                    className="saved-filter active"
+                                >
                                     All
                                 </button>
 
-                                <button className="saved-filter">
+                                <button
+                                    type="button"
+                                    className="saved-filter"
+                                >
                                     Artwork
                                 </button>
 
-                                <button className="saved-filter">
+                                <button
+                                    type="button"
+                                    className="saved-filter"
+                                >
                                     Book
                                 </button>
+
                             </div>
+
                         </div>
 
+
+                        {/* Saved Grid */}
                         <div className="saved-grid">
 
                             {savedItems.map((item) => (
+
                                 <article
                                     className="saved-card"
                                     key={item.id}
                                 >
+
+                                    {/* Image */}
                                     <div className="saved-card-image">
+
                                         <img
                                             src={item.image}
                                             alt={item.name}
                                         />
 
                                         <button
+                                            type="button"
                                             className="saved-heart"
-                                            aria-label="Saved item"
+                                            aria-label="Remove from saved items"
                                         >
                                             ♥
                                         </button>
+
                                     </div>
 
+
+                                    {/* Content */}
                                     <div className="saved-card-content">
 
                                         <div className="saved-card-title">
+
                                             <div>
-                                                <h3>{item.name}</h3>
+
+                                                <h3>
+                                                    {item.name}
+                                                </h3>
+
                                                 <span>
                                                     {item.creator}
                                                 </span>
+
                                             </div>
+
                                         </div>
 
+
+                                        {/* Bid Information */}
                                         <div className="saved-bid-info">
 
                                             <div>
-                                                <span>Auction time</span>
+
+                                                <span>
+                                                    Auction time
+                                                </span>
+
                                                 <strong>
                                                     {item.auctionTime}
                                                 </strong>
+
                                             </div>
 
+
                                             <div>
-                                                <span>Current Bid</span>
+
+                                                <span>
+                                                    Current Bid
+                                                </span>
+
                                                 <strong>
                                                     {item.currentBid}
                                                 </strong>
+
                                                 <small>
                                                     {item.bid}
                                                 </small>
+
                                             </div>
 
                                         </div>
 
-                                        <button className="saved-place-bid">
+
+                                        {/* Bid Button */}
+                                        <button
+                                            type="button"
+                                            className="saved-place-bid"
+                                        >
                                             Place a Bid
                                         </button>
 
                                     </div>
+
                                 </article>
+
                             ))}
 
                         </div>
@@ -147,7 +245,9 @@ function Saved() {
                     </section>
 
                 </main>
+
             </div>
+
         </div>
     );
 }

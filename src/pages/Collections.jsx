@@ -44,16 +44,40 @@ function Collections() {
                 <main className="collections-page">
 
                     <div className="collections-page-heading">
+
                         <div>
-                            <h1>Collections</h1>
-                            <p>Welcome Collections Page</p>
+
+                            <span className="collections-page-label">
+                                NFT MARKETPLACE
+                            </span>
+
+                            <h1>
+                                Collections
+                            </h1>
+
+                            <p>
+                                Explore and manage your NFT collections
+                            </p>
+
                         </div>
 
                         <div className="collections-breadcrumb">
-                            Home <span>›</span> Collections
-                        </div>
-                    </div>
 
+                            <span>
+                                Home
+                            </span>
+
+                            <b>
+                                ›
+                            </b>
+
+                            <span>
+                                Collections
+                            </span>
+
+                        </div>
+
+                    </div>
                     <section className="collections-content">
 
                         <div className="collections-content-heading">
